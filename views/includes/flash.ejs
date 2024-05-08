@@ -1,0 +1,28 @@
+<% if (successMessage && successMessage.length) { %>
+<br />
+<div class="alert alert-success alert-dismissible fade show flash-message" role="alert">
+  <i class="fa-solid fa-circle-check"></i>
+  &nbsp;<%= successMessage %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+
+<% if (errorMessage && errorMessage.length) { %>
+    <br />
+    <div class="alert alert-danger alert-dismissible fade show flash-message" role="alert">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      &nbsp;<%= errorMessage %>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <% } %>
+    

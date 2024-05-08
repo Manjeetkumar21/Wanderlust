@@ -1,0 +1,41 @@
+<%- layout('/layouts/boilerplate') %>
+<body>
+  <section class="d-flex justify-content-center align-items-center">
+  <div class="mt-3 login-signup">
+    <div class="mb-3">
+      <h3 class="mb-3 text-center">Login</h3>
+      <form
+        action="/login"
+        method="POST"
+        novalidate
+        class="needs-validation"
+      >
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          name="username" id="username"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password" id="password"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button class="btn btn-dark signup-btn">LOGIN</button>
+      </form>
+    </div>
+    <div class="not-account">
+      Don't have an account? <a class="not-account-signup" href="/signup">SignUp</a>
+    </div>
+  </div>
+</section>
+</body>

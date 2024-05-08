@@ -1,0 +1,48 @@
+<%- layout('/layouts/boilerplate') %>
+
+
+<section class="profile-section">
+    <div class="profile-container mt-4">
+        <div class="profile-image">
+            <img src="<%= userProfile.image.url %>" alt="Profile Photo">
+        </div>
+
+        <div class="profile-info">
+            <h2 class="profile-username"><%= userProfile.username %></h2>
+            <p class="profile-name"><%= userProfile.name %></p>
+            <a href="/profile/edit" class="profile-edit-btn text-decoration-none">Edit Profile</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <section class="container cards-section">
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+          <% for(let listing of allListings){ %>
+          <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card listing-card col">
+              <div class="image-card">
+                <img
+                  src="<%= listing.image.url %>"
+                  class="card-img-top"
+                  alt="Listing-Image"
+                />
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="title"><b><%= listing.title %> </b></span><br />
+                  <span>
+                    <b>&#8377; <%= listing.price.toLocaleString("en-IN") %> </b>/night
+                    <i class="tax-info">&nbsp; &nbsp; +18% GST</i></span
+                  >
+                </p>
+              </div>
+            </div>
+          </a>
+          <% } %>
+        </div>
+      </section>
+
+
+
+</section>

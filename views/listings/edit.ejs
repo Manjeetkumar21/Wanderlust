@@ -1,0 +1,105 @@
+<%- layout('/layouts/boilerplate') %>
+
+<section class="new-listing">
+<div class="mt-3 listing-form">
+  <div class="mb-5">
+    <h3 class="mb-3 text-center">Edit Your Listing</h3>
+    <form
+      method="post"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          value="<%= listing.title %>"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Title looks good!</div>
+        <div class="invalid-feedback">Please enter the title!</div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="form-control" required>
+<%= listing.description %></textarea
+        >
+        <div class="invalid-feedback">Please enter a short description.</div>
+      </div>
+
+      <div class="mb-3">
+        <span>Original Image</span><br />
+        <img
+          class="originalImage"
+          src="<%= originalUrl %>"
+          alt="Listing Image"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload New Image</label>
+        <input type="file" name="listing[image]" class="form-control" />
+        <div class="invalid-feedback">Please enter a valid link of image.</div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            value="<%= listing.price %>"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Price should be valid.</div>
+        </div>
+
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Contact</label>
+          <input
+            type="text"
+            name="listing[contact]"
+            value="<%= listing.contact %>"
+            placeholder="Enter your contact"
+            class="form-control"
+            onkeydown="return /[0-9\b]/i.test(event.key) || event.key === 'Backspace'"
+            maxlength="10"
+            minlength="10"
+            required
+          />
+          <div class="invalid-feedback">Contact no. should be valid.</div>
+        </div>
+
+        <div class="mb-3 col-md-4">
+          <label for="country" class="form-label">Country</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="listing[country]"
+            id="countries"
+            required
+          ></select>
+          <div class="invalid-feedback">Country name should be valid.</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          value="<%= listing.location %>"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Location should be valid.</div>
+      </div>
+
+      <button class="btn btn-dark edit-btn mt-3">EDIT</button>
+    </form>
+  </div>
+</div>
+</section>
+<script src="/script/fetchCountry.js"></script>

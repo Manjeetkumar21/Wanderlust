@@ -1,0 +1,19 @@
+  
+  <div class="loader-container loading-container">
+    <div class="custom-loader"></div>
+  </div>
+
+  
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loading-container");
+
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild("loader");
+    });
+  });
+
+
+</script>

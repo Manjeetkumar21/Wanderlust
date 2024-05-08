@@ -1,0 +1,66 @@
+@media screen and (max-width: 480px)  {
+
+    .flash-message{
+        font-size: 0.7rem !important;
+    }
+
+   
+    .brand-image{
+        width: 3rem !important;
+    }
+
+    .navbar-nav{
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        margin-top: 1rem !important;
+    }
+
+    .filter-section{
+        flex-direction: column;
+        
+    }
+    .filter-wrapper{
+        min-width: 90%;
+        margin-bottom: 1.5rem;
+    }
+
+    .rating-box{
+        width: 100% !important;
+    }
+
+    .search-container{
+        width: 60%;
+    }
+    .search-bar{
+        width: 100%;
+        height: 2.1rem;
+    }
+
+    .search-bar input{
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem !important;
+    }
+   
+    .login-signup{
+        width: 100%;
+      }
+
+    .listing-form{
+        width: 100% !important;
+    }
+
+    /* Show Page */
+
+    .show-container{
+        width: 100%;
+      }
+
+      /* Profile Page */
+
+      .profile-info h2{
+        font-size: 1rem;
+      }
+
+}

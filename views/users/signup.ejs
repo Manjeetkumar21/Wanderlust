@@ -1,0 +1,77 @@
+<%- layout('/layouts/boilerplate') %>
+
+<body>
+  <section class="d-flex justify-content-center align-items-center">
+    <div class="mt-3 login-signup">
+      <div class="mb-5">
+        <h3 class="mb-3 text-center">Welcome to WanderLust</h3>
+        <form action="/signup" method="POST" novalidate class="needs-validation">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              maxlength="50"
+              required
+            />
+            <div class="valid-feedback">Name looks good!</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="form-control"
+              maxlength="100"
+              onkeydown="return /[a-zA-Z0-9_. ]/i.test(event.key)"
+              required
+            />
+            <div class="valid-feedback">Username looks good!</div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              required
+            />
+          </div>
+  
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              required
+            />
+          </div>
+  
+          <button class="btn btn-dark signup-btn">SIGN UP</button>
+        </form>
+  
+        
+        <div class="google-facebook">
+          <a href="/auth/google" class="auth-link">
+            <div class="auth-button">
+              <div class="auth-logo">
+                <img src="/images/Google Logo.png" alt="Google_Image" />
+              </div>
+              <div class="auth-description">
+                Sign In with Google
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

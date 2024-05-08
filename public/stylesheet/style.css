@@ -1,0 +1,448 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.container {
+  flex: 1;
+}
+
+/* ----------------- NAVBAR ------------- */
+
+.navbar {
+  padding-block: 1rem !important;
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.primary-btn {
+  background-color: rgb(228, 228, 228) !important;
+  padding-inline: 1rem !important;
+  border-radius: 1.1rem;
+  margin-inline: 0.5rem !important;
+  font-weight: 600 !important;
+  color: rgb(0, 0, 0) !important;
+  transition: 0.3s ease-in;
+}
+
+.primary-btn:hover {
+  background-color: #524e4f !important;
+  color: white !important;
+}
+
+.secondary-btn {
+  color: #3a3637 !important;
+  padding-inline: 1.2rem !important;
+  border: 1px solid #524e4f !important;
+  border-radius: 1.1rem;
+  margin-inline: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+.secondary-btn:hover {
+  color: white !important;
+  background-color: #524e4f !important;
+  border-color: #524e4f !important;
+  transition: 0.2s ease-in;
+}
+
+.grey-btn {
+  padding-inline: 1rem !important;
+  margin-inline: 0.5rem !important;
+  border-radius: 1rem;
+}
+
+.grey-btn:hover {
+  background-color: rgb(228, 228, 228) !important;
+  transition: 0.2s ease-in;
+}
+
+.navbar-collapse{
+  flex-grow: 0 !important;
+}
+  .search-container{
+    display: inline-block;
+    margin-right: 0.5rem !important;
+  }
+  .search-bar{
+    display: flex;
+  }
+  .search-bar input{
+    margin: 0px !important;
+    border-radius: 20px 0px 0px 20px !important;
+    padding: 0.5rem 2rem;
+  }
+
+  .btn-search {
+    border: none;
+  background-color: #f3424d !important;
+  padding-inline: 0.5rem !important;
+  border-radius: 0px 20px 20px 0px;
+  margin-inline: 0.5rem !important;
+  margin-left: 0px !important;
+  color: white !important;
+}
+
+.btn-search:hover {
+  background-color: #ce3c45 !important;
+}
+
+.btn-search i{
+  display: inline;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+.brand-image{
+  width: 5rem;
+}
+
+.search-input:focus{
+  box-shadow: none !important;
+  border-color: #f3424d !important;
+  outline: none !important;
+  outline-color: transparent !important;
+}
+
+/* --------------FOOTER--------------- */
+.footer-info {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.footer-icon{
+  text-decoration: none;
+  color: #222;
+}
+
+
+
+.footer-info-socials i {
+  font-size: 1.3rem;
+  margin-inline: 0.8rem;
+  transition: 0.2s ease-in;
+}
+
+.footer-info-socials i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.footer-info-links a {
+  text-decoration: none;
+  color: #222222;
+  margin-inline: 0.2rem;
+  padding-block: 5px;
+}
+
+.footer-info-links a:hover {
+  border-bottom: 1px solid #222222;
+}
+
+.title-footer {
+  font-size: 1rem;
+  margin-block: 1rem;
+  color: #222222;
+}
+
+/* --------------Body Sections Cards------------- */
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-card {
+  height: 15rem;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem !important;
+}
+
+.card-img-top {
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 0.5rem 0rem !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  transition: all 0.2s ease-in;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* CREATE AND EDIT */
+
+.create-btn,
+.edit-btn,
+.signup-btn {
+  background-color: #f3424d !important;
+  border-color: #f3424d !important;
+}
+
+.create-btn:hover,
+.edit-btn:hover,
+.signup-btn:hover {
+  background-color: #ce3c45 !important;
+}
+
+/* SHOW PAGE */
+
+.show-container{
+  width: 60%;
+}
+
+.show-image-card {
+  height: 20rem;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem !important;
+}
+
+.show-img {
+  height: 100%;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns .btn {
+  background-color: #f3424d !important;
+  border-color: #f3424d !important;
+}
+
+.btns .btn:hover {
+  background-color: #ce3c45 !important;
+}
+
+.show-card-text {
+  line-height: 1.8rem;
+}
+
+/* Flash Icon */
+
+.fa-circle-check {
+  color: darkgreen;
+}
+
+.fa-triangle-exclamation {
+  color: darkred;
+}
+
+/* REVIEWS RATING */
+
+
+.rating-box{
+  border: none !important;
+  width: 45% !important;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.originalImage {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* LOADER */
+
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.621);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 999;
+}
+.custom-loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #f3424d 94%, #0000) top/10px 10px
+      no-repeat,
+    conic-gradient(#0000 30%, #f3424d);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* LOGIN SIGNUP */
+
+.login-signup{
+  width: 50%;
+}
+
+.not-account{
+  text-align: center;
+}
+
+.not-account-signup{
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(6, 96, 213);
+}
+
+/* New Listing */
+
+.new-listing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listing-form{
+  width: 70%;
+}
+
+/* PROFILE */
+
+.profile-container{
+       
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile-image{
+  height: 8rem;
+  width: 8rem;
+  border: 3px solid #333;
+  padding: 2px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  
+}
+
+.profile-edit-btn{
+border: none;
+outline: none;
+background-color: #222;
+color: white;
+border-radius: 4px;
+font-size: 0.9rem;
+padding: 0.2rem 0.5rem;
+
+}
+
+/* GOOGLE AUTH */
+
+.google-facebook{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  
+}
+.auth-link{
+  margin-top: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  
+}
+.auth-button {
+  background-color: rgb(4, 177, 235);
+  outline: 1px solid rgb(4, 177, 235);
+  padding: 3px 1rem 3px 3px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.auth-button:hover{
+  box-shadow: 2px 2px 2px rgb(187, 187, 187);
+}
+.auth-logo{
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+}
+.auth-logo img {
+  height: 2rem;
+  width: 2rem;
+}
+.auth-description{
+ 
+  color: white;
+  font-weight: 600;
+}
+
+.user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
