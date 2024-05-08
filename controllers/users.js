@@ -76,6 +76,6 @@ module.exports.updateProfile = async (req, res, next)=>{
     updatedProfile.save();
   }
 
-  req.flash("success", "Profile Update Route Working!");
+  req.flash("success", "Profile Updated");
   res.redirect("/profile")
 }
