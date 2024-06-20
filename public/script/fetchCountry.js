@@ -1,35 +1,26 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Fetch working");
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    console.log("Fetch working")
-    const country = document.getElementById("countries");
+    const countrySelect = document.getElementById("countries");
+    const selectedCountryFromBackend = countrySelect.getAttribute('data-selected-country');
 
-    // Fetch countries from REST Countries API
     fetch("https://restcountries.com/v3.1/all")
         .then((response) => response.json())
         .then((data) => {
-            let option = "<option selected disabled>Select the Country</option>";
-            let countryData = data.filter((country)=>{
-                return country.name.common
-            })
+            let options = "<option selected disabled>Select the Country</option>";
+            let countryData = data.map(country => country.name.common);
 
-            let countryDataUpdate = new Array();
-            for(i=0; i<250; i++){
-                countryDataUpdate[i] = countryData[i].name.common;
+            countryData.sort();
+
+            countryData.forEach(countryName => {
+                options += `<option value="${countryName}">${countryName}</option>`;
+            });
+
+            countrySelect.innerHTML = options;
+
+            if (selectedCountryFromBackend) {
+                countrySelect.value = selectedCountryFromBackend;
             }
-
-            
-            countryDataUpdate.sort();
-
-            for(i=0; i<countryDataUpdate.length; i++){
-                
-                option+= `<option value='${countryDataUpdate[i]}'>${countryDataUpdate[i]}</option>`;
-                
-            }
-
-            country.innerHTML = option;
         })
         .catch(error => console.error("Error fetching countries:", error));
 });
-
-
-
