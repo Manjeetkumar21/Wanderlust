@@ -10,7 +10,6 @@ WanderLust is an immersive full-stack web application inspired by the renowned A
 - [Usage](#usage)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 
 
