@@ -19,11 +19,20 @@ passport.use(
           return done(null, existingUser);
         }
 
+        let username = currUser.given_name.toLowerCase();
+
+        // Check if the username already exists
+        let userWithSameUsername = await User.findOne({ username });
+        if (userWithSameUsername) {
+          // If the username already exists, create a unique username
+          username = `${username}${Math.floor(Math.random() * 10000)}`;
+        }
+
         const newUser = new User({
           provider: "google",
           providerId: currUser.sub,
           name: currUser.name,
-          username: currUser.given_name.toLowerCase(),
+          username: username,
           email: currUser.email,
         });
 
